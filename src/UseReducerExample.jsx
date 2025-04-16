@@ -21,7 +21,15 @@ const UseReducerExample = () => {
   console.log(state);
   return (
     <div className="container">
-      {state?.showTextFlag ? <h3>Use Reducer Example</h3> : null}
+      {state?.showTextFlag ? (
+        <h3
+          style={{
+            backgroundColor: state?.changeTextStylesFlag ? "red" : "black",
+          }}
+        >
+          Use Reducer Example
+        </h3>
+      ) : null}
       <button className="btn" onClick={() => dispatch({ type: "HIDE_TEXT" })}>
         Hide
       </button>
