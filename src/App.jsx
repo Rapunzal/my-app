@@ -6,6 +6,7 @@ import { Routes, Route } from "react-router-dom";
 import Counter from "./Counter";
 import Navbar from "./components/Navbar";
 import Parent from "./components/Parent";
+import UseReducerExample from "./useReducerExample";
 import { ThemeContext } from "./context/CounterContext";
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
       style={{
         fontSize: theme === "light" ? "20px" : "40px",
         backgroundColor: theme === "light" ? "#fff" : "#000",
-        color: theme === "light" ? "blue" : "yellow",
+        color: theme === "light" ? "black" : "white",
       }}
     >
       <Navbar />
@@ -23,6 +24,7 @@ function App() {
         <Route path="/" element={<Counter />} />
         <Route path="/products" element={<Products />} />
         <Route path="/context" element={<Parent />} />
+        <Route path="/reducer" element={<UseReducerExample />} />
       </Routes>
     </div>
   );

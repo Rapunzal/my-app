@@ -13,8 +13,10 @@ const Navbar = () => {
   };
   return (
     <div>
-      <button onClick={changeTheme}>Change Theme</button>
-      <ul>
+      <button className="btn" onClick={changeTheme}>
+        Change Theme
+      </button>
+      <ul className="nav">
         <li>
           <Link to="/">Counter</Link>
         </li>
@@ -23,6 +25,9 @@ const Navbar = () => {
         </li>
         <li>
           <Link to="/context">Context</Link>
+        </li>
+        <li>
+          <Link to="/reducer">Context</Link>
         </li>
       </ul>
     </div>
